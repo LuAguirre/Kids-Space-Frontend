@@ -18,6 +18,11 @@ const routes = [
     name: "browse",
     component: () => import("../views/Browse.vue"),
   },
+  {
+    path: "/video/:id",
+    name: "video",
+    component: () => import ("../views/Video.vue")
+  }
 ];
 
 const router = new VueRouter({

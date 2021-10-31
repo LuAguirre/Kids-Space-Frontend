@@ -14,21 +14,15 @@
 </template>
 
 <script>
+import { VIDEOS } from "@/type";
+
 import Carrousel from "./Carrousel";
 
 export default {
   name: "Videos",
   components: { Carrousel },
   mounted() {
-    this.videos = [
-      "item1",
-      "item2",
-      "item3",
-      "item4",
-      "item5",
-      "item6",
-      "item7",
-    ];
+    this.videos = VIDEOS;
   },
   data: () => ({
     videos: [],

@@ -1,39 +1,14 @@
 <template>
   <div class="carrousel">
     <carousel-3d :controls-visible="true" :clickable="true">
-   <!-- <slide v-for="(item, i) in items" :key="i" :index="i">
+      <slide v-for="(item, i) in items" :key="i" :index="i">
         <figure>
-          <img src="https://picsum.photos/360/270" />
+          <a :href="item.uri + item.id"><img :src="getImage(item.imageUrl)"/></a>
           <figcaption>
-            {{item}}
+            {{ item.uri }}
           </figcaption>
         </figure>
-      </slide> -->
-     <slide :index="0">
-       <figure>
-       <a href=""><img src="../assets/img/caleidoscopioIMG.png"/></a>
-       </figure>
-       </slide>
-       <slide :index="1">
-       <figure>
-       <a href=""><img src="../assets/img/aprendepinturaIMG.png"/></a>
-       </figure>
-       </slide>
-       <slide :index="2">
-       <figure>
-       <a href=""><img src="../assets/img/cambioclimaticoIMG.png"/></a>
-       </figure>
-       </slide>
-       <slide :index="3">
-       <figure>
-       <a href=""><img src="../assets/img/evolucionhumanaIMG.png"/></a>
-       </figure>
-       </slide>
-       <slide :index="4">
-       <figure>
-       <a href=""><img src="../assets/img/queeslalunaIMG.png"/></a>
-       </figure>
-       </slide>
+      </slide>
     </carousel-3d>
   </div>
 </template>
@@ -49,6 +24,11 @@ export default {
     return {
       model: 0,
     };
+  },
+  methods: {
+    getImage(path) {
+      return require(`../assets/${path}`);
+    },
   },
 };
 </script>
