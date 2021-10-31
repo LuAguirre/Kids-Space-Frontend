@@ -61,6 +61,7 @@ export default {
       {name: "Videos", component: () => import("@/components/Videos.vue"),},
       {name: "Lecturas", component: () => import("@/components/Lectures.vue"),},
       {name: "Nosotros", component: () => import("@/components/About.vue"),},
+      {name: "pdf", component: () => import("@/components/About.vue"),},
     ],
   }),
 };

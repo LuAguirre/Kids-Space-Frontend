@@ -1,9 +1,11 @@
 <template>
+<main class="videoPlayer">
   <div id="app">
     <div v-if="!!video" class="container">
       <my-video :sources="video.sources" :options="video.options"></my-video>
     </div>
   </div>
+</main>
 </template>
 
 <script>
@@ -47,3 +49,13 @@ export default {
   },
 };
 </script>
+<style>
+  .videoPlayer {
+    background-color: #242528;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+  }
+</style>
