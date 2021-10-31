@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Carrousel from "./Carrousel";
+import Carrousel from "./CarrouselLectures";
 
 export default {
   name: "Libros",
